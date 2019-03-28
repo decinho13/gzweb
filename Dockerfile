@@ -25,7 +25,7 @@ ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
 # clone gzweb
 RUN hg clone https://bitbucket.org/osrf/gzweb ~/gzweb
-
+RUN source /usr/local/share/gazebo/setup.sh
 # build gzweb
 RUN cd ~/gzweb \
     && hg up default \
